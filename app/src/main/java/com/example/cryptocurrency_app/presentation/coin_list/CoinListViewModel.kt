@@ -8,11 +8,13 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.cryptocurrency_app.common.Resource
 import com.example.cryptocurrency_app.domain.use_case.get_coins.GetCoinsUseCase
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import javax.inject.Inject
 
 @RequiresExtension(extension = Build.VERSION_CODES.S, version = 7)
+@HiltViewModel
 class CoinListViewModel @Inject constructor(
     private val getCoinsUseCase: GetCoinsUseCase
 ): ViewModel() {
